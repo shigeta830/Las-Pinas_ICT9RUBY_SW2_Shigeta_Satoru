@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 Seatwork 2</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+     
+    <style>
+        body {
+            background-color: #eef2f3;
+            padding: 20px;
+        }
+        .container-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <h1 class="text-center">TV Product Locator</h1>
+
+    
+    <p class="text-center">
+        Enter your budget to see a simple TV recommendation.
+    </p>
+
+    <div class="container-box">
+
+         
+        <h2>Budget Checker</h2>
+
+         
+        <label>Budget (₱):</label>
+        <input type="number" id="budget" class="form-control">
+
+        <br>
+
+       
+        <button class="btn btn-primary w-100" onclick="showTV()">
+            Show Result
+        </button>
+
+        <br><br>
+
+        
+        <p id="output"></p>
+
+    </div>
+ 
+    <p class="text-center mt-3">
+        TV reference:
+        <a href="https://www.lg.com/ph/tvs" target="_blank">LG TVs</a>
+    </p>
+
+    
+    <script>
+        
+        function showTV() {
+
+            
+            let budget = document.getElementById("budget").value;
+
+             
+            if (budget >= 30000) {
+                document.getElementById("output").innerHTML =
+                    "Recommended TV: 55-inch Smart TV";
+            } 
+            else if (budget >= 15000) {
+                document.getElementById("output").innerHTML =
+                    "Recommended TV: 43-inch LED TV";
+            } 
+            else if (budget > 0) {
+                document.getElementById("output").innerHTML =
+                    "Recommended TV: 32-inch Basic TV";
+            } 
+            else {
+                document.getElementById("output").innerHTML =
+                    "Please enter a valid budget.";
+            }
+        }
+    </script>
+
+</body>
+</html>
+    
